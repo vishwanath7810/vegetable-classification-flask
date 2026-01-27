@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Vegetable Classification</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">Vegetable classification</div>
+    <div class="nav-links">
+        <a href="/">About</a>
+        <a href="/">Contact</a>
+    </div>
+</div>
+
+
+<!-- MAIN CARD -->
+<div class="upload-box upload-style">
+
+    <!-- CLOUD OR IMAGE (SAME POSITION) -->
+    {% if image_path %}
+        {% if wrong_image %}
+            <img src="{{ url_for('wrong_image_file', filename=image_path) }}"
+                 class="preview-img">
+        {% else %}
+            <img src="{{ url_for('uploaded_file', filename=image_path) }}"
+                 class="preview-img">
+        {% endif %}
+    {% else %}
+        <div class="cloud-icon">
+            ⬆️
+        </div>
+    {% endif %}
+
+    <!-- UPLOAD FORM -->
+    <form action="/predict" method="post" enctype="multipart/form-data" class="upload-form">
+
+        <label class="file-label">
+            Choose file
+            <input type="file" name="image" id="fileInput" hidden required>
+        </label>
+
+        <span class="file-name" id="fileName">
+            {% if image_path %}
+                {{ image_path }}
+            {% else %}
+                No file chosen
+            {% endif %}
+        </span>
+
+        <button type="submit">Submit</button>
+    </form>
+
+    <!-- RESULT TEXT -->
+    {% if result %}
+        <h2 class="result-text">Vegetable is {{ result }}</h2>
+    {% else %}
+        <h2 class="result-text">Vegetable is</h2>
+    {% endif %}
+
+    <!-- CARTOON VEGETABLES -->
+    <div class="cartoon-wrapper">
+        <img src="{{ url_for('static', filename='images/cartoon_vegetables.png') }}"
+             class="cartoon-img">
+    </div>
+
+    <p class="tagline">Classify your vegetable with GreenClassify.com</p>
+
+</div>
+
+<script>
+    const fileInput = document.getElementById("fileInput");
+    const fileName = document.getElementById("fileName");
+
+    fileInput.addEventListener("change", function () {
+        if (this.files.length > 0) {
+            fileName.textContent = this.files[0].name;
+        } else {
+            fileName.textContent = "No file chosen";
+        }
+    });
+</script>
+
+</body>
+</html>

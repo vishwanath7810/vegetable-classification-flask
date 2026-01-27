@@ -1,0 +1,18 @@
+# Python
+venv/
+__pycache__/
+
+# ML models
+*.h5
+*.keras
+veg_model_fixed/
+models/
+
+# Datasets
+Vegetable Images/
+uploads/
+uploads/wrong_images/
+
+# OS
+.DS_Store
+Thumbs.db

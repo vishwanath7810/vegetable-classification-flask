@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Prediction Result</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+<div class="navbar">
+    <div class="logo">Vegetable classification</div>
+</div>
+
+<div class="upload-box">
+    <img src="{{ url_for('uploaded_file', filename=image_path) }}" class="result-img">
+
+    <h2>Vegetable is <span class="result">{{ result }}</span></h2>
+
+    <a href="/prediction" class="back-btn">Predict Another</a>
+</div>
+
+</body>
+</html>

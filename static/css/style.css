@@ -1,0 +1,211 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background: #e8f7ec;
+}
+
+/* NAVBAR */
+.navbar {
+    background: #214d32;
+    color: white;
+    padding: 15px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+}
+
+/* UPLOAD PAGE */
+.upload-box {
+    background: #c8f1da;
+    width: 70%;
+    margin: 60px auto;
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* IMAGE PREVIEW */
+.preview-img {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    border: 3px solid #214d32;
+}
+
+/* FORM LAYOUT */
+.upload-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+/* CUSTOM FILE BUTTON */
+.file-label {
+    background: white;
+    border: 1px solid #999;
+    padding: 6px 12px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+/* FILE NAME TEXT */
+.file-name {
+    font-size: 14px;
+    color: #1f3f2b;
+    font-weight: bold;
+    min-width: 120px;
+    text-align: left;
+}
+
+/* SUBMIT BUTTON */
+button {
+    padding: 8px 20px;
+    background: #214d32;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #163624;
+}
+
+/* RESULT */
+.result-text {
+    font-size: 26px;
+    font-weight: bold;
+    margin-top: 15px;
+}
+
+/* TAGLINE */
+.tagline {
+    margin-top: 25px;
+    font-size: 18px;
+} 
+/* HERO SECTION (INDEX PAGE ONLY) */
+.hero {
+    height: 360px;
+    background: url('/static/images/kinf.jpg') center/cover no-repeat;
+    position: relative;
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.35);
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hero-overlay h1 {
+    color: white;
+    font-size: 42px;
+    text-align: center;
+    font-weight: bold;
+}
+
+/* ABOUT & CONTACT SECTIONS */
+.section {
+    padding: 50px;
+    text-align: center;
+    background: #214d32;
+    color: white;
+}
+
+.section.dark {
+    background: #1a3d28;
+}
+
+/* ===== PREDICTION PAGE (MATCH SCREEN 1) ===== */
+
+.upload-style {
+    background: #c8f1da;
+    width: 75%;
+    min-height: 360px;
+    margin: 50px auto;
+    padding: 35px;
+    border-radius: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* CLOUD ICON */
+.cloud-icon {
+    width: 90px;
+    height: 90px;
+    background: #7ddbc2;
+    border-radius: 50%;
+    font-size: 42px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 15px;
+}
+
+/* FORM */
+.upload-form {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+}
+
+.file-label {
+    background: #fff;
+    border: 1px solid #aaa;
+    padding: 6px 12px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.file-name {
+    font-size: 14px;
+    color: #1f3f2b;
+    min-width: 110px;
+}
+
+/* RESULT TEXT */
+.result-text {
+    font-size: 22px;
+    font-weight: bold;
+    margin: 12px 0;
+}
+
+/* CARTOON SECTION */
+.cartoon-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.cartoon-img {
+    width: 360px;
+}
+
+/* TAGLINE */
+.tagline {
+    margin-top: 12px;
+    font-size: 16px;
+}
+
